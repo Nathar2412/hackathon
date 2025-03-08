@@ -3,6 +3,7 @@ import './App.css';
 import JwtLoginView from './pages/jwt';
 import SignupForm from './pages/doctorSignup';
 import PatientSignupForm from './pages/patientSignup';
+import DoctorDashboard from './pages/doctorDashboard';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
 
       {/* <JwtLoginView /> */}
       {/* <SignupForm /> */}
-      <PatientSignupForm />
+      {/* <PatientSignupForm /> */}
+      <DoctorDashboard />
     </div>
   );
 }
