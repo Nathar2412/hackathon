@@ -1,9 +1,9 @@
+import { AppBar, Box, CssBaseline, Drawer, List, ListItem, ListItemText, Toolbar, Typography } from "@mui/material";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemText, CssBaseline, Box } from "@mui/material";
-import Tests from "./tests";
-import Disease from "./disese";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import DiseaseList from "./disese";
 import Patient from "./patient";
+import Tests from "./tests";
 
 const drawerWidth = 240;
 
@@ -52,7 +52,7 @@ export default function DoctorDashboard() {
                 <Box component="main" sx={{ flexGrow: 1, p: 3, ml: `${drawerWidth}px`, mt: "64px" }}>
                     <Routes>
                         <Route path="/tests" element={<Tests />} />
-                        <Route path="/disease" element={<Disease />} />
+                        <Route path="/disease" element={<DiseaseList />} />
                         <Route path="/patient" element={<Patient />} />
                     </Routes>
                 </Box>
