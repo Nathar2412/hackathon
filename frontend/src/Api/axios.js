@@ -47,7 +47,7 @@ const createAxiosInstance = (serviceName) => {
                     try {
                         // Attempt to refresh the access token using the refresh token
                         const { data } = await axios.post(
-                            `${microservices.userService}/users/refresh-token`,
+                            `http://192.168.68.32:3000/api/auth/users/refresh-token`,
                             {}, // Typically, the refresh request doesn't need a body, but check your backend API
                             {
                                 headers: {

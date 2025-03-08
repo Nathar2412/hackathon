@@ -122,9 +122,7 @@ const UserForm = () => {
                         </Button>
                     </Grid>
                 </Grid>
-                <Typography variant="h5" align="center" gutterBottom>
-                    User Form
-                </Typography>
+
 
                 <Typography variant="h5" align="center" gutterBottom sx={{ marginTop: 3 }}>
                     Test Data

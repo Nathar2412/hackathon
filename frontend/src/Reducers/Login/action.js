@@ -3,13 +3,22 @@ import { getMethod } from "../../APIManager/APIMethod";
 
 export const getLogin = createAsyncThunk(
   "data/getLogin",
-  async (url, thunkAPI) => {
+  async (arg, thunkAPI) => {
     // const response = await getMethod(url);
     // return response.json();
-    const response = await fetch(url);
+const{url,body}= arg
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
     return response.json();
   }
 );
+
 
 export const getTestDetails = createAsyncThunk(
   "data/getTestDetails",

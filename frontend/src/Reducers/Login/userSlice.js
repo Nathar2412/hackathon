@@ -5,6 +5,7 @@ const userSlice = createSlice({
   name: "user",
   initialState: {
     data: null,
+    loginData:null,
     loading: false,
     error: null,
   },
@@ -16,7 +17,7 @@ const userSlice = createSlice({
       })
       .addCase(getLogin.fulfilled, (state, action) => {
         state.loading = false;
-        state.data = action.payload;
+        state.loginData = action.payload;
       })
       .addCase(getLogin.rejected, (state, action) => {
         state.loading = false;
@@ -28,7 +29,7 @@ const userSlice = createSlice({
       })
       .addCase(getTestDetails.fulfilled, (state, action) => {
         state.loading = false;
-        state.testDetails = action.payload;
+        state.data = action.payload;
       })
       .addCase(getTestDetails.rejected, (state, action) => {
         state.loading = false;
