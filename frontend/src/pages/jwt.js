@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../style.css";
 import CustomInput from "../components/Custominput";
 import Button from "../components/Button";
+import { Link } from "@mui/material";
 // import CustomInput from "./components/CustomInput";
 // import Button from "./components/Button";
 
@@ -43,6 +44,8 @@ export default class App extends Component {
                     <Button type="button" color="primary" className="form__custom-button">
                         Log in
                     </Button>
+                    <Link href="#">Signup as a Doctor</Link>
+                    <Link href="#">Signup as a Patient</Link>
                 </form>
             </div>
         );
