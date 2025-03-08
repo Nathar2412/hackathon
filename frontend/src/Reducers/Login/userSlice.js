@@ -1,4 +1,4 @@
-import { getLogin } from "./action";
+import { getLogin, getTestDetails } from "./action";
 import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
@@ -19,6 +19,18 @@ const userSlice = createSlice({
         state.data = action.payload;
       })
       .addCase(getLogin.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+
+      .addCase(getTestDetails.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getTestDetails.fulfilled, (state, action) => {
+        state.loading = false;
+        state.testDetails = action.payload;
+      })
+      .addCase(getTestDetails.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });

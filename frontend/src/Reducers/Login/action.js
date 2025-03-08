@@ -10,3 +10,13 @@ export const getLogin = createAsyncThunk(
     return response.json();
   }
 );
+
+export const getTestDetails = createAsyncThunk(
+  "data/getTestDetails",
+  async (url, thunkAPI) => {
+    // const response = await getMethod(url);
+    // return response.json();
+    const response = await fetch(url);
+    return response.json();
+  }
+);
